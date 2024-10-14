@@ -1,9 +1,10 @@
 #!/bin/bash
 
 main() {
-    var_pling=""
-    var_plang=""
-    var_plong=""
+
+    # var_pling=""
+    # var_plang=""
+    # var_plong=""
 
     # Test if divisble by 3
     if [ $(($1 % 3)) == 0 ]; then
