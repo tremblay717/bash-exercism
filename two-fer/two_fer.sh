@@ -3,9 +3,7 @@
 main() {
 
     if [ $# -eq 0 ]; then
-        
         echo "One for you, one for me."
-
     else
         for var in "$@"
         do  
