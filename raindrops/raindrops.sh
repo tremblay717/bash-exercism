@@ -1,24 +1,24 @@
-!/bin/bash
+#!/usr/bin/env bash
 
 main() {
-
-    # Test if divisble by 3
+    
+    # Test if divisible by 3
     if [ $(($1 % 3)) == 0 ]; then
-        var_pling="Pling"
+        var="Pling"
     fi
-    # Test if divisble by 5
+    # Test if divisible by 5
     if [ $(($1 % 5)) == 0 ]; then
-        var_plang="Plang"
+        var="${var}Plang"
     fi
-    # Test if divisble by 7
+    # Test if divisible by 7
     if [ $(($1 % 7)) == 0 ]; then
-        var_plong="Plong"
+        var="${var}Plong"
     fi
 
-    if [[ -z $var_pling && -z $var_plang && -z $var_plong ]]; then
-        echo $1
+    if [ -z "$var" ]; then
+        echo "$@"
     else
-        echo "$var_pling$var_plang$var_plong"
+        echo "$var"
     fi
 }
 
